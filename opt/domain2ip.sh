@@ -4,7 +4,7 @@
 SEP=';'
 OUTFILE="pair_ip.l"
 
-while read line;                                                    1 ⨯ 3 ⚙
+while read line;                                                    
 do
   # ping with timing 1 sec and one shot
   str_msg=$(ping -t 1 -c 1 $line |  grep -oE "\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b" | head -n 1);
